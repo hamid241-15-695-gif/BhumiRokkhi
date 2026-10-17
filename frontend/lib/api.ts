@@ -1,9 +1,6 @@
 export const API =
   process.env.NEXT_PUBLIC_API_URL ||
-  (typeof window !== "undefined" &&
-  !["localhost", "127.0.0.1"].includes(window.location.hostname)
-    ? window.location.origin
-    : "http://localhost:8000");
+  (typeof window !== "undefined" ? window.location.origin : "");
 export type User={id:number|null;role:'guest'|'member';phone_masked:string|null;expires_at:string;demo_only:boolean;full_access:boolean};
 export type Plot={id:string;district:string;district_bn:string;upazila:string;upazila_bn:string;mouza:string;mouza_bn:string;khatian:string;dag:string;area_decimal:number;lat:number|null;lng:number|null;source:string};
 export type Claim={plot_id:string;deed_no:string;seller:string;buyer:string;portion_code:string;share_start:number;share_end:number;deed_date:string;mutation_owner?:string|null;mutation_status?:'completed'|'pending'|'unknown';previous_deed?:string|null;district?:string;mouza?:string;khatian?:string;dag?:string;ref_key?:string;sha256?:string};
