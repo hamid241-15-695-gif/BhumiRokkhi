@@ -1,0 +1,3 @@
+'use client';
+import {ShieldCheck} from 'lucide-react';import {useLanguage} from './LanguageProvider';
+export default function SiteFooter(){const {t,lang}=useLanguage();return <footer className="mt-20 border-t bg-white"><div className="container-main py-10 flex flex-col md:flex-row justify-between gap-5"><div><div className="flex gap-2 items-center font-extrabold text-forest"><ShieldCheck size={20}/>{t('brand')}</div><p className="text-xs text-slate-500 mt-2 max-w-lg">{t('footer')}</p></div><p className="text-xs text-slate-500">{lang==='bn'?'টুইনরুটস · ল্যান্ডটেক ইনোভেশন হ্যাকাথন ২০২৬ · পি৩':'TwinRoots · LandTech Innovation Hackathon 2026 · P3'}</p></div></footer>}

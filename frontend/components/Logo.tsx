@@ -1,0 +1,3 @@
+'use client';
+import {useLanguage} from './LanguageProvider';
+export default function Logo(){const {t}=useLanguage();return <span className="flex items-center gap-3"><svg viewBox="0 0 54 54" aria-hidden="true" className="w-11 h-11 shrink-0"><rect width="54" height="54" rx="16" fill="#106b56"/><path d="M27 7L43 13V25C43 36 36 43 27 47C18 43 11 36 11 25V13L27 7Z" stroke="#f4cc79" strokeWidth="2" fill="#16816a"/><path d="M16 30L27 24L38 30L27 36Z" fill="#f6dea3"/><path d="M16 24L27 18L38 24L27 30Z" fill="#ffffff"/></svg><span className="flex flex-col leading-tight"><b className="text-xl text-ink tracking-tight">{t('brand')}</b><span className="text-[10px] text-slate-500 mt-1">{t('tag')}</span></span></span>}

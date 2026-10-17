@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import './globals.css';import 'leaflet/dist/leaflet.css';import {LanguageProvider} from '@/components/LanguageProvider';import {AuthProvider} from '@/components/AuthProvider';import SiteHeader from '@/components/SiteHeader';import SiteFooter from '@/components/SiteFooter';
+export const metadata:Metadata={title:'ভূমিরক্ষী',description:'Synthetic land fraud screening prototype by TwinRoots.'};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="bn"><body><LanguageProvider><AuthProvider><SiteHeader/><main className="min-h-[65vh]">{children}</main><SiteFooter/></AuthProvider></LanguageProvider></body></html>}
